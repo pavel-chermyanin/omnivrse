@@ -1,0 +1,32 @@
+
+.profile {
+  max-width: 1110px;
+  margin: 100px auto 100px;
+
+  .text {
+    font-size: 29px;
+    margin-bottom: 50px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .buttons_text {
+    text-align: center;
+    margin-block: 70px;
+    font-size: 75px;
+    font-weight: 700;
+  }
+
+  .buttons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    .button{
+      width: 460px;
+    }
+
+  }
+}

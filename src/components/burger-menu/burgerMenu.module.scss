@@ -1,0 +1,121 @@
+.burgerMenu {
+  position: relative;
+  z-index: 1000;
+
+  .burgerButton {
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+    //z-index: 101;
+    transition: all 0.3s ease;
+
+    &.open {
+      //position: fixed;
+      //right: 20px;
+      //top: 20px;
+      //display: none;
+    }
+  }
+
+  .burgerLine {
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transition: all 0.3s ease;
+    transform-origin: center;
+
+    .open & {
+      background: #fff;
+    }
+  }
+
+  .top {
+    .open & {
+      transform: translateY(11px) rotate(45deg);
+    }
+  }
+
+  .middle {
+    .open & {
+      opacity: 0;
+    }
+  }
+
+  .bottom {
+    .open & {
+      transform: translateY(-11px) rotate(-45deg);
+    }
+  }
+
+  .menuContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+
+    &.visible {
+      transform: translateX(0);
+    }
+  }
+
+  .menuContent {
+    padding: 60px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .menuItem {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .danger {
+    color: #ff4d4f;
+    margin-top: auto;
+
+    &:hover {
+      background: rgba(255, 77, 79, 0.1);
+    }
+  }
+}
