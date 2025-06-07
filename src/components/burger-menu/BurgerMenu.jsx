@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from './BurgerMenu.module.scss';
+import styles from './burger.module.scss';
 
 export const BurgerMenu = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false);
