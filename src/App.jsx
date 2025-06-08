@@ -3,8 +3,9 @@ import { Header } from "./components/header/Header.jsx";
 import {Top} from "./components/top/Top.jsx";
 import {Profile} from "./components/profile/Profile.jsx";
 import {Info} from "./components/info/Info.jsx";
-import {DressCode} from "./components/dress-code/DressCode.jsx";
+import {EventDetails} from "./components/event-details/EventDetails.jsx";
 import omniWorld from './assets/omniverse-world.webp'
+import {Footer} from "./components/footer/Footer.jsx";
 
 function App() {
 
@@ -16,9 +17,9 @@ function App() {
         <Top/>
         <Profile/>
         <Info/>
-        {/*<div className={styles.omniWorld}/>*/}
         <img className={styles.omniWorld} src={omniWorld} alt=""/>
-        <DressCode/>
+        <EventDetails/>
+        <Footer/>
       </div>
     </div>
   )

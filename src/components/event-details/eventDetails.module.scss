@@ -1,0 +1,55 @@
+
+.event_details {
+  margin-top: 200px;
+  .title {
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  text-align: center;
+
+  .dress_code {
+    min-height: 900px;
+
+
+    .jellyfish_decor {
+      &::before {
+        top: 0;
+        left: -50px;
+        position: absolute;
+        content: '';
+        width: 400px;
+        height: 700px;
+        background-image: url("../../assets/jellyfich-left.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        top: -200px;
+        right: -200px;
+        position: absolute;
+        content: '';
+        width: 400px;
+        height: 500px;
+        background-image: url("../../assets/jellyfich-right.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .partners{
+    min-height: 900px;
+  }
+  .info_partner{
+    min-height: 500px;
+
+    .info_partner_text{
+      font-size: 95px;
+      font-weight: 800;
+      color: #1c1c1c;
+    }
+  }
+
+
+}

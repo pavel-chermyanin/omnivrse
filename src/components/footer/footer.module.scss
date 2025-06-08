@@ -1,0 +1,28 @@
+
+.footer{
+
+  //width: 100%;
+  //position: absolute;
+  //bottom: 200px;
+  .img_wrapper{
+    display: flex;
+    flex-direction: column;
+    .footer_img{
+      //object-position: 50% 80px;
+      width: 100%;
+    }
+    .footer_text {
+      height: 120px;
+      padding: 40px 0;
+      width: 100%;
+      background: #1c1c1c;
+      color: #fff;
+      font-weight: 700;
+      background-image: url("../../assets/izmeni_soznanie.png");
+      background-repeat: repeat-x; /* Повтор только по горизонтали */
+      background-size: auto 80px; /* Авто-ширина, высота = высоте блока */
+      background-position:0 50%;
+    }
+  }
+
+}
