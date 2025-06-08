@@ -103,8 +103,10 @@
 
     }
     .button_wrapper{
-      position: absolute;
-      right: 0;
+      z-index: 100;
+      position: fixed;
+      right: 10%;
+      bottom: 10%;
     }
   }
 }
