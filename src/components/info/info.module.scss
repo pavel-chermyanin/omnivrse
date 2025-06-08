@@ -1,0 +1,29 @@
+
+
+.info{
+  position: relative;
+  max-width: 1300px;
+  margin: 170px auto 0;
+    text-align: center;
+
+  .info_title{
+    //margin-block: 70px;
+    font-size: 75px;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  .info_img{
+    margin-bottom: 60px;
+    //display: inline-block;
+    //margin: 0 auto;
+  }
+  .text {
+    text-align: center;
+    font-size: 29px;
+    margin-bottom: 50px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

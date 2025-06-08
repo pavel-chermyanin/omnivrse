@@ -9,13 +9,20 @@
   .bg_1 {
     height: 100%;
     padding-top: 80px;
-    z-index: -1;
     //position: absolute;
     //inset: 0;
     flex: 1;
-    background-image: url("./assets/bg1.webp");
+    background-image: url("./assets/bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -100px;
+
+    .omniWorld{
+      width: 100%;
+      //height: 176vh;
+      //background-image: url("./assets/omniverse-world.webp");
+      //background-repeat: no-repeat;
+      //background-size: cover;
+    }
   }
 }
