@@ -4,6 +4,8 @@ import telegram from '../../assets/telegram.png'
 import vk from '../../assets/vk.png'
 import {Button} from "../button/Button.jsx";
 import {BurgerMenu} from "../burger-menu/BurgerMenu.jsx";
+import {LinkButton} from "../link-button/LinkButton.jsx";
+import {buyTicketUrl, telegramUrl, vkUrl} from "../../App.jsx";
 
 export const Header = () => {
   const menuItems = [
@@ -29,14 +31,16 @@ export const Header = () => {
           </div>
 
           <div className={styles.right}>
-            <Button >Купить билет</Button>
+            <LinkButton target={'_blank'} href={buyTicketUrl}>Купить билет</LinkButton>
             <div className={styles.social_links}>
-              <a href="#">
+              <LinkButton plain target={'_blank'} href={telegramUrl}>
                 <img src={telegram} alt="telegram"/>
-              </a>
-              <a href="#">
+              </LinkButton>
+              <LinkButton plain target={'_blank'} href={vkUrl}>
                 <img src={vk} alt="vk"/>
-              </a>
+              </LinkButton>
+
+
             </div>
             <BurgerMenu items={menuItems} />
           </div>

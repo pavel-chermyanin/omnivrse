@@ -1,6 +1,8 @@
 import styles from './top.module.scss'
 import geo from '../../assets/geo.png'
 import {Button} from "../button/Button.jsx";
+import {buyTicketUrl, geoUrl} from "../../App.jsx";
+import {LinkButton} from "../link-button/LinkButton.jsx";
 
 export const Top = () => {
   return (
@@ -17,13 +19,16 @@ export const Top = () => {
           <span>2025</span>
         </h1>
         <div className={styles.fotter}>
-          <div className={styles.geo_wrapper}>
-            <img src={geo} alt="geo"/>
-            <span className={styles.geo_wrapper_top_span}>СУПЕРМЕТАЛЛ</span>
-            <span>2-я Бауманская, 9/23</span>
-          </div>
+          <LinkButton plain href={geoUrl} rel="noopener noreferrer" target="_blank">
+            <div className={styles.geo_wrapper}>
+              <img src={geo} alt="geo"/>
+              <span className={styles.geo_wrapper_top_span}>СУПЕРМЕТАЛЛ</span>
+              <span>2-я Бауманская, 9/23</span>
+            </div>
+          </LinkButton>
+
           <div className={styles.button_wrapper}>
-            <Button>Купить билет</Button>
+            <LinkButton target={'_blank'} href={buyTicketUrl}>Купить билет</LinkButton>
           </div>
         </div>
 
