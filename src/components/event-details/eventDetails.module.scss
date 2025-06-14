@@ -1,24 +1,30 @@
+@import '../../mixins/mixins.scss';
 
 .event_details {
-  margin-top: 200px;
+  @include adaptiv-value('margin-top',80,200);
+  //margin-top: 200px;
   .title {
-    font-size: 75px;
+    @include fz(24, 75);
+    //font-size: 75px;
     font-weight: 700;
     margin-bottom: 60px;
   }
   text-align: center;
 
   .dress_code {
-    min-height: 900px;
+    @include adaptiv-value('min-height',200,900);
+    //min-height: 900px;
 
 
     .jellyfish_decor {
       &::before {
         top: 0;
-        left: -50px;
+        //left: -50px;
         position: absolute;
         content: '';
-        width: 400px;
+        @include adaptiv-value('width',100,400);
+        @include adaptiv-value('left',0,-50);
+        //width: 400px;
         height: 700px;
         background-image: url("../../assets/jellyfich-left.webp");
         background-repeat: no-repeat;
@@ -26,11 +32,14 @@
       }
 
       &::after {
-        top: -200px;
-        right: -200px;
+        //top: -200px;
+        //right: -200px;
         position: absolute;
         content: '';
-        width: 400px;
+        //width: 400px;
+        @include adaptiv-value('width',100,400);
+        @include adaptiv-value('right',-20,-200);
+        @include adaptiv-value('top',-70,-200);
         height: 500px;
         background-image: url("../../assets/jellyfich-right.webp");
         background-repeat: no-repeat;
@@ -39,13 +48,16 @@
     }
   }
   .partners{
-    min-height: 900px;
+    @include adaptiv-value('min-height',200,900);
+    //min-height: 900px;
   }
   .info_partner{
-    min-height: 500px;
+    @include adaptiv-value('min-height',200,500);
+    //min-height: 500px;
 
     .info_partner_text{
-      font-size: 95px;
+      @include fz(50, 95);
+      //font-size: 95px;
       font-weight: 800;
       color: #1c1c1c;
     }

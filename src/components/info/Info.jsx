@@ -7,8 +7,8 @@ export const Info = () => {
   return (
     <div className={styles.info}>
 
-      <h3 className={styles.info_title}>КОНЦЕПЦИЯ</h3>
-      <img className={styles.info_img} src={omniImg} alt=""/>
+      <h3  className={styles.info_title}>КОНЦЕПЦИЯ</h3>
+      <img id={'concept'} className={styles.info_img} src={omniImg} alt=""/>
       <div >
         <p className={styles.text}>
 

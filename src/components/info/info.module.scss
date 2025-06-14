@@ -1,26 +1,34 @@
+@import '../../mixins/mixins.scss';
 
-
-.info{
+.info {
   position: relative;
   max-width: 1300px;
-  margin: 170px auto 0;
-    text-align: center;
+  //margin-block: auto !important;
+  margin-inline: auto;
+  padding-inline: 10px;
+  @include adaptiv-value('margin-top', 80, 170);
+  text-align: center;
 
-  .info_title{
+  .info_title {
     //margin-block: 70px;
-    font-size: 75px;
+    @include fz(24, 75);
+    //font-size: 75px;
     font-weight: 700;
-    margin-bottom: 60px;
+    //margin-bottom: 60px;
+    @include adaptiv-value('margin-bottom', 20, 60);
   }
-  .info_img{
-    margin-bottom: 60px;
+
+  .info_img {
+    @include adaptiv-value('margin-bottom', 20, 60);
     //display: inline-block;
     //margin: 0 auto;
   }
+
   .text {
     text-align: center;
-    font-size: 29px;
-    margin-bottom: 50px;
+    @include fz(16, 30);
+    //font-size: 29px;
+    margin-bottom: 50p;
 
     span {
       font-weight: 700;

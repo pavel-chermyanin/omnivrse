@@ -43,7 +43,7 @@ export const Profile = () => {
           тренды индустрии. Мы делаем масштабнее, смелее, ярче - чтобыы снова удивить даже самых искушенных
         </p>
 
-        <p className={styles.buttons_text}>КУПИТЬ БИЛЕТ</p>
+        <p id={'tickets'} className={styles.buttons_text}>КУПИТЬ БИЛЕТ</p>
         <div className={styles.buttons}>
           <LinkButton className={styles.button} target={'_blank'} href={hrefUrl}>КАК ЮРИДИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
           <LinkButton className={styles.button} target={'_blank'} href={buyTicketUrl}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</LinkButton>

@@ -5,13 +5,39 @@ import vk from '../../assets/vk.png'
 import {Button} from "../button/Button.jsx";
 import {BurgerMenu} from "../burger-menu/BurgerMenu.jsx";
 import {LinkButton} from "../link-button/LinkButton.jsx";
-import {buyTicketUrl, telegramUrl, vkUrl} from "../../App.jsx";
+import {buyTicketUrl, mainSiteUrl, telegramUrl, vkUrl} from "../../App.jsx";
 
 export const Header = () => {
+
   const menuItems = [
-    { label: 'Сохранить фильтр', onClick: () => {} },
-    { label: 'Сбросить фильтры', onClick: () => {}},
-    { label: 'Выйти', onClick: () => {}},
+    {
+      id:'about',
+      label: 'О мероприятии', onClick: () => {
+      }
+    },
+    {
+      id:'tickets',
+      label: 'Билеты', onClick: () => {
+      }
+    },
+    {
+      id:'concept',
+      label: 'Концепция',
+      onClick: () => {
+      }
+    },
+    {
+      id: 'dress_code',
+      label: 'Дресс-код',
+      onClick: () => {
+      }
+    },
+    {
+      id: 'partners',
+      label: 'Партнеры Мероприятия',
+      onClick: () => {
+      }
+    },
   ];
   return (
     <header className={styles.header}>
@@ -19,7 +45,9 @@ export const Header = () => {
       <div className={'container'}>
         <div className={styles.flex_container}>
           <div className={styles.left}>
-            <img src={logo} alt="logo"/>
+            <LinkButton plain target={'_blank'} href={mainSiteUrl}>
+              <img className={styles.logo} src={logo} alt="logo"/>
+            </LinkButton>
             <p className={styles.logo_text}>
               <span className={styles.primary_color_text}>
                 летняя
@@ -31,18 +59,19 @@ export const Header = () => {
           </div>
 
           <div className={styles.right}>
-            <LinkButton target={'_blank'} href={buyTicketUrl}>Купить билет</LinkButton>
+            <LinkButton className={styles.right_buy_ticket} target={'_blank'} href={buyTicketUrl}>Купить
+              билет</LinkButton>
             <div className={styles.social_links}>
-              <LinkButton plain target={'_blank'} href={telegramUrl}>
+              <LinkButton className={styles.social_telegram} plain target={'_blank'} href={telegramUrl}>
                 <img src={telegram} alt="telegram"/>
               </LinkButton>
-              <LinkButton plain target={'_blank'} href={vkUrl}>
+              <LinkButton className={styles.social_vk} plain target={'_blank'} href={vkUrl}>
                 <img src={vk} alt="vk"/>
               </LinkButton>
 
 
             </div>
-            <BurgerMenu items={menuItems} />
+            <BurgerMenu items={menuItems}/>
           </div>
 
         </div>

@@ -1,4 +1,7 @@
+@import "./mixins/mixins.scss";
+
 .wrapper {
+
   position: relative;
   width: 100%;
   min-height: 100vh; // или нужная вам высота
@@ -8,7 +11,8 @@
 
   .bg_1 {
     height: 100%;
-    padding-top: 80px;
+    @include adaptiv-value('padding-top', 120, 150);
+    //padding-top: 150px;
     //position: absolute;
     //inset: 0;
     flex: 1;

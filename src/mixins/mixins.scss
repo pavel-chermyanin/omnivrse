@@ -1,0 +1,45 @@
+@mixin fz($min-fz, $max-fz) {
+  $add-fz: $max-fz - $min-fz;
+  $add-min-fz: $add-fz + $add-fz * 0.7;
+  $max-width: 1920;
+  $min-width: 320;
+
+  // Для разрешения больше 1920px
+  @media (min-width: 1920px) {
+    font-size: #{$max-fz}px; // Используем максимальный размер шрифта
+  }
+
+  // Для разрешения между 767px и 1920px
+  @media (min-width: 767px) and (max-width: 1920px) {
+    font-size: calc(#{$min-fz}px + #{$add-fz} * (100vw / #{$max-width}));
+  }
+
+  // Для разрешения меньше 767px
+  @media (max-width: 767px) {
+    font-size: calc(
+            #{$min-fz}px + #{$add-min-fz} * ((100vw - #{$min-width}px) / #{$max-width})
+    );
+  }
+}
+
+@mixin adaptiv-value($property, $minSize, $startSize) {
+  $addSize: $startSize - $minSize;
+  $addMinSize: $addSize + $addSize * 0.7;
+  $max-width: 1920;
+  $min-width: 320;
+
+  @media (max-width: 767px) {
+
+    #{$property}: calc(#{$minSize + px} + #{$addMinSize} * ((100vw - #{$min-width + px}) / #{$max-width})) !important;
+  }
+  @media (min-width: 767px) {
+
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw / #{$max-width}))) !important;
+  }
+  @media (min-width: 1920px) {
+
+    #{$property}: #{$startSize + px} !important;
+  }
+
+}
+

@@ -1,6 +1,12 @@
+@import '../../mixins/mixins.scss';
+
 .header {
-  height: 120px;
-  background: #1c1c1c;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  //height: 120px;
+  @include adaptiv-value('height',100,120);
+  background: rgba(#1c1c1c, .7) ;
   font-family: 'Soledago';
 
 
@@ -8,19 +14,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    @include adaptiv-value('gap',10,40);
     height: 100%;
 
     .left {
       display: flex;
-      gap: 40px;
+      @include adaptiv-value('gap',10,40);
       align-items: center;
 
+      .logo{
+        @include adaptiv-value('max-width',40,92);
+      }
       .logo_text {
-        font-size: 30px;
+        @include fz(16,30);
         color: #fff;
         display: flex;
         gap: 8px;
+
+        @media (max-width: 400px) {
+          flex-direction: column;
+          gap: 0;
+        }
 
         .primary_color_text {
           color: var(--primary-color);
@@ -30,13 +44,31 @@
 
     .right {
       display: flex;
-      gap: 40px;
+      @include adaptiv-value('gap',10,40);
       align-items: center;
+      .right_buy_ticket{
+        @include fz(12,25);
+        @include adaptiv-value('padding-inline',20,40);
+        @include adaptiv-value('padding-block',10,20);
+        @media (max-width: 950px) {
+          //display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
 
       .social_links {
         display: flex;
-        gap: 40px;
+        @include adaptiv-value('gap',10,40);
         align-items: center;
+
+        .social_telegram{
+          @include adaptiv-value('max-width',28,48);
+        }
+        .social_vk{
+          @include adaptiv-value('max-width',38,72);
+        }
       }
     }
   }

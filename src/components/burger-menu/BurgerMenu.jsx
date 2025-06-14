@@ -31,6 +31,18 @@ export const BurgerMenu = ({ items }) => {
     };
   }, [isOpen]);
 
+  // Функция для плавной прокрутки
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+    closeMenu();
+  };
+
   return (
     <div className={styles.burgerMenu} ref={menuRef}>
       <button
@@ -54,16 +66,17 @@ export const BurgerMenu = ({ items }) => {
             &times;
           </button>
           {items.map((item, index) => (
-            <button
+            <a
               key={index}
+              href={`#${item.id}`}
               className={`${styles.menuItem} ${item.isDanger ? styles.danger : ''}`}
-              onClick={() => {
-                item.onClick();
-                closeMenu();
+              onClick={(e) => {
+                e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+                scrollToSection(item.id);
               }}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
       </div>

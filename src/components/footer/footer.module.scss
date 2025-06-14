@@ -1,18 +1,23 @@
+@import '../../mixins/mixins.scss';
 
-.footer{
+.footer {
 
   //width: 100%;
   //position: absolute;
   //bottom: 200px;
-  .img_wrapper{
+  .img_wrapper {
     display: flex;
     flex-direction: column;
-    .footer_img{
+
+    .footer_img {
       //object-position: 50% 80px;
       width: 100%;
     }
+
     .footer_text {
-      height: 120px;
+      @include adaptiv-value('height', 40, 120);
+      @include adaptiv-value('padding-block', 10, 40);
+      //height: 120px;
       padding: 40px 0;
       width: 100%;
       background: #1c1c1c;
@@ -20,8 +25,10 @@
       font-weight: 700;
       background-image: url("../../assets/izmeni_soznanie.png");
       background-repeat: repeat-x; /* Повтор только по горизонтали */
-      background-size: auto 80px; /* Авто-ширина, высота = высоте блока */
-      background-position:0 50%;
+      //background-size: auto 80px; /* Авто-ширина, высота = высоте блока */
+      //background-size-x: 100px;
+      background-size: auto clamp(20%, 40%, 100%);
+      background-position: 0 50%;
     }
   }
 
