@@ -96,11 +96,14 @@
       }
 
       &::before {
-        z-index: -1;
-        left: 120px;
-        top: -75px;
-        width: 120px;
-        height: 110px;
+        //z-index: -1;
+        left: 20px;
+        top: -20px;
+
+        @include adaptiv-value('width', 20, 120);
+        @include adaptiv-value('height', 15, 110);
+        @include adaptiv-value('top', -15, -90);
+        @include adaptiv-value('left', 40, 140);
         content: '';
         position: absolute;
         background-image: url("../../assets/buterfly.png");

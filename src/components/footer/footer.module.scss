@@ -15,10 +15,10 @@
     }
 
     .footer_text {
-      @include adaptiv-value('height', 40, 120);
-      @include adaptiv-value('padding-block', 10, 40);
+      @include adaptiv-value('height', 40, 80);
+      //@include adaptiv-value('padding-block', 10, 10);
       //height: 120px;
-      padding: 40px 0;
+      //padding: 20px 0;
       width: 100%;
       background: #1c1c1c;
       color: #fff;
@@ -27,7 +27,7 @@
       background-repeat: repeat-x; /* Повтор только по горизонтали */
       //background-size: auto 80px; /* Авто-ширина, высота = высоте блока */
       //background-size-x: 100px;
-      background-size: auto clamp(20%, 40%, 100%);
+      background-size: auto clamp(10%, 30%, 100%);
       background-position: 0 50%;
     }
   }

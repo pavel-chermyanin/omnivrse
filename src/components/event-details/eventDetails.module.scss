@@ -17,15 +17,17 @@
 
 
     .jellyfish_decor {
+      overflow-x: hidden;
       &::before {
         top: 0;
         //left: -50px;
         position: absolute;
         content: '';
         @include adaptiv-value('width',100,400);
+        @include adaptiv-value('height',300,700);
         @include adaptiv-value('left',0,-50);
         //width: 400px;
-        height: 700px;
+        //height: 700px;
         background-image: url("../../assets/jellyfich-left.webp");
         background-repeat: no-repeat;
         background-size: contain;
@@ -54,6 +56,11 @@
   .info_partner{
     @include adaptiv-value('min-height',200,500);
     //min-height: 500px;
+
+    .sostav_logo{
+      @include adaptiv-value('width',150,380);
+
+    }
 
     .info_partner_text{
       @include fz(50, 95);
