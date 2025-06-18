@@ -49,8 +49,31 @@ export const Profile = () => {
           <LinkButton className={styles.button} target={'_blank'} href={buyTicketUrl}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
           {/*<Button className={styles.button}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</Button>*/}
         </div>
+        <p className={styles.text}>
+          <span>КУПИТЬ БИЛЕТ ПО БЕЗНАЛИЧНОМУ РАСЧЕТУ:</span><br/>
+          zakaz@izmenisoznanie.com
+        </p>
+        <p className={styles.text}>
+          <span>ПО ВОПРОСАМ ПАРТНЕРСКИХ ИНТЕГРАЦИЙ:</span><br/>
+          YBachinina@izmenisoznanie.com
+          NKisenkov@izmenisoznanie.com
+        </p>
+
 
       </div>
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
