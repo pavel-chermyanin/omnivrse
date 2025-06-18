@@ -22,8 +22,8 @@ export const Info = () => {
         </p>
 
         <p className={styles.text}>
-          <span>OMNIVERSE - </span>
-          это портал в пространство бесконечных вселенных,
+          <span>OMNIVERSE </span>
+          — это портал в пространство бесконечных вселенных,
           существующих одновременно
         </p>
         <p className={styles.text}>

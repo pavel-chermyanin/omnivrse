@@ -9,7 +9,6 @@ export const EventDetails = () => {
 
   return (
     <div className={styles.event_details}>
-
       {/*<img className={styles.event_bg} src={eventBg} alt=""/>*/}
       <div className={'container'}>
         {/*<div id={'dress_code'} className={styles.dress_code}>*/}
