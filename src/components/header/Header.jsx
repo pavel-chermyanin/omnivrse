@@ -9,19 +9,29 @@ import {buyTicketUrl, mainSiteUrl, telegramUrl, vkUrl} from "../../App.jsx";
 
 export const Header = () => {
 
+  const onClickTickets = () => {
+    const element = document.getElementById('tickets');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
   const menuItems = [
     {
-      id:'about',
+      id: 'about',
       label: 'О мероприятии', onClick: () => {
       }
     },
     {
-      id:'tickets',
+      id: 'tickets',
       label: 'Билеты', onClick: () => {
       }
     },
     {
-      id:'concept',
+      id: 'concept',
       label: 'Концепция',
       onClick: () => {
       }
@@ -59,8 +69,8 @@ export const Header = () => {
           </div>
 
           <div className={styles.right}>
-            <LinkButton className={styles.right_buy_ticket} target={'_blank'} href={buyTicketUrl}>Купить
-              билет</LinkButton>
+            <Button onClick={onClickTickets} className={styles.right_buy_ticket}>Купить
+              билет</Button>
             <div className={styles.social_links}>
               <LinkButton className={styles.social_telegram} plain target={'_blank'} href={telegramUrl}>
                 <img src={telegram} alt="telegram"/>

@@ -1,9 +1,21 @@
 @import '../../mixins/mixins.scss';
 
 .event_details {
+  position: relative;
+  .event_bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    @include adaptiv-value('top',-200,-1000);
+  }
+  //background-image: url("../../assets/event_bg.webp");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-position: center center;
   @include adaptiv-value('margin-top',80,200);
   //margin-top: 200px;
   .title {
+    color: var(--primary-color);
     @include fz(24, 75);
     //font-size: 75px;
     font-weight: 700;
@@ -14,6 +26,8 @@
   .dress_code {
     @include adaptiv-value('min-height',200,900);
     //min-height: 900px;
+
+
 
 
     .jellyfish_decor {

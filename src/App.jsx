@@ -25,8 +25,11 @@ function App() {
         <Profile/>
         <Info/>
         <img className={styles.omniWorld} src={omniWorld} alt=""/>
-        <EventDetails/>
-        <Footer/>
+        <div className={styles.bg_2}>
+          <EventDetails/>
+          <Footer/>
+        </div>
+
       </div>
     </div>
   )

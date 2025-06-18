@@ -2,6 +2,7 @@ import styles from './eventDetails.module.scss'
 import {mainSiteUrl, sostavSiteUrl} from "../../App.jsx";
 import {LinkButton} from "../link-button/LinkButton.jsx";
 import sostavLogo from '../../assets/sostav-logo.webp'
+import eventBg from '../../assets/event_bg.webp'
 
 
 export const EventDetails = () => {
@@ -9,6 +10,7 @@ export const EventDetails = () => {
   return (
     <div className={styles.event_details}>
 
+      {/*<img className={styles.event_bg} src={eventBg} alt=""/>*/}
       <div className={'container'}>
         {/*<div id={'dress_code'} className={styles.dress_code}>*/}
         {/*  <h2 className={styles.title}>ДРЕСС-КОД</h2>*/}

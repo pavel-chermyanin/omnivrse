@@ -41,6 +41,7 @@
   }
 
   .buttons_text {
+    color: var(--primary-color);
     text-align: center;
     //margin-block: 70px;
     @include fz(24, 75);
