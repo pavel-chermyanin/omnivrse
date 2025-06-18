@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /$
+Allow: /assets/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
+Disallow: /vite.svg
+Disallow: /@vite/*
+Disallow: /@fs/*
+Disallow: /?*
+
+# Для динамических маршрутов (если есть)
+Allow: /events/
+Allow: /blog/
+Disallow: /blog/*/edit
+
+# Яндекс-специфичные правила
+User-agent: Yandex
+Clean-param: utm_source /
+Clean-param: ref /blog/
+
+# Google-специфичные правила
+User-agent: Googlebot
+Allow: /assets/images/
+Disallow: /assets/json/
+
+# Sitemaps
+Sitemap: https://digitalelka.com/sitemap.xml
+Sitemap: https://digitalelka.com/sitemap-images.xml
+
+# Crawl-delay (опционально)
+Crawl-delay: 1

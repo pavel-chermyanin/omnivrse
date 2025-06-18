@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+        <loc>https://digitalelka.com/</loc>
+        <image:image>
+            <image:loc>https://digitalelka.com/android-chrome-512x512.png</image:loc>
+            <image:title>ЛЕТНЯЯ DIGITAL ELKA 2025</image:title>
+            <image:caption>Костюмированный фестиваль digital-индустрии</image:caption>
+        </image:image>
+    </url>
+
+</urlset>

@@ -9,7 +9,7 @@ export const Info = () => {
 
       <h3  className={styles.info_title}>КОНЦЕПЦИЯ</h3>
       <img id={'concept'} className={styles.info_img} src={omniImg} alt=""/>
-      <div >
+      <div className={styles.text_wrapper}>
         <p className={styles.text}>
 
           <span>Прошлое, настоящее и будущее — едины.</span><br/>
@@ -20,6 +20,7 @@ export const Info = () => {
           или футурологов, а только от нас самих. Мы сами прокладываем свой путь.
 
         </p>
+
         <p className={styles.text}>
           <span>OMNIVERSE - </span>
           это портал в пространство бесконечных вселенных,

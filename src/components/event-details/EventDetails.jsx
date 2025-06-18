@@ -10,10 +10,10 @@ export const EventDetails = () => {
     <div className={styles.event_details}>
 
       <div className={'container'}>
-        <div id={'dress_code'} className={styles.dress_code}>
-          <h2 className={styles.title}>ДРЕСС-КОД</h2>
-          <div className={styles.jellyfish_decor}/>
-        </div>
+        {/*<div id={'dress_code'} className={styles.dress_code}>*/}
+        {/*  <h2 className={styles.title}>ДРЕСС-КОД</h2>*/}
+        {/*  <div className={styles.jellyfish_decor}/>*/}
+        {/*</div>*/}
         {/*<div id={'partners'} className={styles.partners}>*/}
         {/*  <h2 className={styles.title}>ПАРТНЕРЫ<br/>МЕРОПРИЯТИЯ</h2>*/}
         {/*</div>*/}

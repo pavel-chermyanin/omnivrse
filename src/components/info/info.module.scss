@@ -23,6 +23,11 @@
     //display: inline-block;
     //margin: 0 auto;
   }
+  .text_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
   .text {
     text-align: center;
