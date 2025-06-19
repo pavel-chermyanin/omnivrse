@@ -35,8 +35,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    //@media (max-width: 1980px) {
-    //  //background-size: contain;
-    //}
+    @media (max-width: 600px) {
+      background-size: contain;
+    }
   }
 }
