@@ -44,7 +44,7 @@
     color: var(--primary-color);
     text-align: center;
     //margin-block: 70px;
-    @include fz(24, 75);
+    @include fz(20, 75);
     //font-size: 75px;
     font-weight: 700;
     @include adaptiv-value('margin-block',30,70);

@@ -50,7 +50,7 @@ export const Profile = () => {
           {/*<Button className={styles.button}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</Button>*/}
         </div>
         <p className={styles.text}>
-          <span>КУПИТЬ БИЛЕТ ПО БЕЗНАЛИЧНОМУ РАСЧЕТУ:</span><br/>
+          <span>ПО ВОПРОСУ ПРИОБРЕТЕНИЯ БИЛЕТОВ:</span><br/>
           zakaz@izmenisoznanie.com
         </p>
         <p className={styles.text}>
