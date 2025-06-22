@@ -49,14 +49,17 @@ export const Profile = () => {
           <LinkButton className={styles.button} target={'_blank'} href={buyTicketUrl}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
           {/*<Button className={styles.button}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</Button>*/}
         </div>
-        <p className={styles.text}>
-          <span>ПО ВОПРОСУ ПРИОБРЕТЕНИЯ БИЛЕТОВ:</span><br/>
-          zakaz@izmenisoznanie.com
+        <p className={styles.text_contacts}>
+          <span className={styles.text_contacts_title}>ПО ВОПРОСУ ПРИОБРЕТЕНИЯ БИЛЕТОВ:</span>
+          <span>zakaz@izmenisoznanie.com</span>
+
         </p>
-        <p className={styles.text}>
-          <span>ПО ВОПРОСАМ ПАРТНЕРСКИХ ИНТЕГРАЦИЙ:</span><br/>
-          YBachinina@izmenisoznanie.com
-          NKisenkov@izmenisoznanie.com
+        <p className={styles.text_contacts}>
+          <span className={styles.text_contacts_title}>ПО ВОПРОСАМ ПАРТНЕРСКИХ ИНТЕГРАЦИЙ:</span>
+          <span>YBachinina@izmenisoznanie.com</span>
+          <span>NKisenkov@izmenisoznanie.com</span>
+
+
         </p>
 
 

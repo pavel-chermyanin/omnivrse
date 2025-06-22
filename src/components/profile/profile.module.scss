@@ -39,6 +39,19 @@
       font-weight: 700;
     }
   }
+  .text_contacts {
+    text-align: center;
+    @include fz(16, 30);
+    //font-size: 29px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .text_contacts_title {
+      font-weight: 700;
+    }
+  }
 
   .buttons_text {
     color: var(--primary-color);

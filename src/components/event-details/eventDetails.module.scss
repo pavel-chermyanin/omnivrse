@@ -38,6 +38,9 @@
     @media (max-width: 1980px) {
       min-height: clamp(100px, 56vw, 1500px);
     }
+    @media (min-width: 3400px) {
+      min-height: clamp(100px, 70vw, 1900px);
+    }
 
 
 
