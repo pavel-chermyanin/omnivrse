@@ -63,6 +63,16 @@
     @include adaptiv-value('margin-block',30,70);
   }
 
+  .text_cost{
+    text-align: center;
+    @include fz(16, 30);
+    font-weight: 700;
+    @include adaptiv-value('margin-block',30,60);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
   .buttons {
     text-align: center;
     display: grid;

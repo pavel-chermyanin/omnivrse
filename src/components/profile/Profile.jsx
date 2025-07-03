@@ -26,7 +26,7 @@ export const Profile = () => {
     <div className={styles.profile}>
 
 
-      <div >
+      <div>
         <p className={styles.text}>
           Продюсеры выездной
           <span> конференции IZMENI SOZNANIE </span>
@@ -44,9 +44,14 @@ export const Profile = () => {
         </p>
 
         <p id={'tickets'} className={styles.buttons_text}>КУПИТЬ БИЛЕТ</p>
+        <div className={styles.text_cost}>
+          <p>СТОИМОСТЬ БИЛЕТА</p>
+          <p>45 000 ₽ + НДС</p>
+        </div>
         <div className={styles.buttons}>
           <LinkButton className={styles.button} target={'_blank'} href={hrefUrl}>КАК ЮРИДИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
-          <LinkButton className={styles.button} target={'_blank'} href={buyTicketUrl}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
+          <LinkButton className={styles.button} target={'_blank'} href={buyTicketUrl}>КАК
+            ФИЗИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
           {/*<Button className={styles.button}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</Button>*/}
         </div>
         <p className={styles.text_contacts}>
