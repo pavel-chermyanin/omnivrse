@@ -23,6 +23,7 @@ function App() {
       <div className={styles.bg_1}>
         <Top/>
         <Profile/>
+
         <Info/>
         <img className={styles.omniWorld} src={omniWorld} alt=""/>
         <div className={styles.bg_2}>

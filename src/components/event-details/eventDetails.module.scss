@@ -9,6 +9,7 @@
     width: 100%;
     @include adaptiv-value('top', -200, -1000);
   }
+
   @include adaptiv-value('margin-top', 80, 200);
 
   .title {
@@ -18,7 +19,8 @@
     font-weight: 700;
     @include adaptiv-value('margin-bottom', 20, 60);
   }
-  .dresscode_title{
+
+  .dresscode_title {
     position: relative;
     //@media (max-width: 1200px) {
     //  @include adaptiv-value('top', -120, 116);
@@ -34,14 +36,20 @@
   .dress_code {
 
 
-    min-height: clamp(100px, 60vw, 1500px);
-    @media (max-width: 1980px) {
-      min-height: clamp(100px, 56vw, 1500px);
+    min-height: clamp(100px, 56vw, 1700px);
+    //@media (max-width: 1200px) {
+    //  min-height: clamp(100px, 60vw, 1700px);
+    //}
+    @media (min-width: 1980px) {
+      min-height: clamp(100px, 60vw, 1700px);
     }
     @media (min-width: 3400px) {
       min-height: clamp(100px, 70vw, 1900px);
     }
 
+    @media (min-width: 4400px) {
+      min-height: clamp(100px, 90vw, 2300px);
+    }
 
 
     .jellyfish_decor {
@@ -80,26 +88,67 @@
   }
 
   .partners {
-    @include adaptiv-value('min-height', 200, 900);
+    //@include adaptiv-value('min-height', 200, 900);
     //min-height: 900px;
-  }
 
-  .info_partner {
-    @include adaptiv-value('min-height', 200, 500);
-    //min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 
-    .sostav_logo {
-      @include adaptiv-value('width', 150, 380);
-
-    }
-
-    .info_partner_text {
-      @include fz(50, 95);
-      //font-size: 95px;
-      font-weight: 800;
-      color: #1c1c1c;
+    @media (max-width: 600px) {
+      gap: 0;
     }
   }
+
+
+  .grid_4{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 30px;
+    .img_logo{
+      max-width: 100%;
+      //width: 100%;
+      object-fit: contain;
+      //@include adaptiv-value('width', 150, 380);
+    }
+  }
+  .grid_5{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    place-items: center;
+    .img_logo{
+      max-width: 100%;
+      //width: 100%;
+      object-fit: contain;
+      //@include adaptiv-value('width', 150, 380);
+    }
+  }
+  .grid_2{
+    //margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    place-items: center;
+    align-self: center;
+    .img_logo{
+      max-width: 100%;
+      //width: 100%;
+      object-fit: contain;
+      //@include adaptiv-value('width', 150, 380);
+    }
+  }
+
+
+  @media (max-width: 600px) {
+    .grid_mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
 
 
 }
