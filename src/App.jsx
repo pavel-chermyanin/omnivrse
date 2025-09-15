@@ -1,11 +1,11 @@
 import styles from './App.module.scss'
-import {Header} from "./components/header/Header.jsx";
-import {Top} from "./components/top/Top.jsx";
-import {Profile} from "./components/profile/Profile.jsx";
-import {Info} from "./components/info/Info.jsx";
-import {EventDetails} from "./components/event-details/EventDetails.jsx";
+import { Header } from "./components/header/Header.jsx";
+import { Top } from "./components/winter-2025/top/Top.tsx";
+import { Profile } from "./components/profile/Profile.jsx";
+import { Info } from "./components/info/Info.jsx";
+import { EventDetails } from "./components/event-details/EventDetails.jsx";
 import omniWorld from './assets/omniverse-world.webp'
-import {Footer} from "./components/footer/Footer.jsx";
+import { Footer } from "./components/footer/Footer.jsx";
 
 export const buyTicketUrl = 'https://digitalelka2025.ticketscloud.org/'
 export const telegramUrl = 'https://t.me/izmenisoznanieagency'
@@ -19,8 +19,11 @@ function App() {
   return (
     <div className={styles.wrapper}>
 
-      <Header/>
-      <div className={styles.bg_1}>
+      <Header />
+      <main className={styles.main}>
+        <Top />
+      </main>
+      {/* <div className={styles.bg_1}>
         <Top/>
         <Profile/>
 
@@ -31,7 +34,7 @@ function App() {
           <Footer/>
         </div>
 
-      </div>
+      </div> */}
     </div>
   )
 }
