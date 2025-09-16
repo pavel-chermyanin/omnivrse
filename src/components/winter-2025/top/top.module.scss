@@ -1,18 +1,156 @@
-.wrapper{
+// top.module.scss
+.wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: clamp(650px, 100vh, 1000px);
-    // @include adaptiv-value('height', 100, 200);
-}
-.title{
-    font-family: Fusing;
-    font-weight: 500;
-    font-size: 100px;
-    // line-height: 1;
-    color: #fff;
+    min-height: 100vh;
+    //background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+    position: relative;
 }
 
-.img_face{
-    height:100px
+.title_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.img_face {
+    width: 330px;
+    height: 330px;
+    object-fit: contain;
+    opacity: 0;
+    //transform: translateX(0px);
+    animation: slideInRight 1.2s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.img_arm {
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideInRightArm 1.2s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.title {
+    margin-top: -100px;
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-size: 150px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    //margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInTitle 1s ease-out forwards;
+    animation-delay: 1.5s;
+    font-family: 'Fusing';
+}
+
+// Анимации
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    //70% {
+    //    transform: translateX(-10px);
+    //}
+    100% {
+        opacity: 1;
+        transform: translateX(0px) ;
+    }
+}
+@keyframes slideInRightArm {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    //70% {
+    //    transform: translateX(-10px);
+    //}
+    100% {
+        opacity: 1;
+        transform: translateX(30px) ;
+    }
+}
+
+@keyframes slideInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    60% {
+        //transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Дополнительные декоративные элементы (снег)
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: snow 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100px) rotate(360deg);
+    }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+    .title_wrapper {
+        gap: 20px;
+    }
+
+    .img_face {
+        width: 120px;
+        height: 120px;
+    }
+
+    .img_arm {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .img_face {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img_arm {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
 }
