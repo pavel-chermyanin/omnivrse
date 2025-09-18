@@ -1,5 +1,5 @@
 import styles from './header.module.scss'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.webp'
 import telegram from '../../assets/telegram.png'
 import vk from '../../assets/vk.png'
 import {Button} from "../button/Button.jsx";
@@ -30,18 +30,18 @@ export const Header = () => {
       label: 'Билеты', onClick: () => {
       }
     },
-    {
-      id: 'concept',
-      label: 'Концепция',
-      onClick: () => {
-      }
-    },
-    {
-      id: 'dress_code',
-      label: 'Дресс-код',
-      onClick: () => {
-      }
-    },
+    // {
+    //   id: 'concept',
+    //   label: 'Концепция',
+    //   onClick: () => {
+    //   }
+    // },
+    // {
+    //   id: 'dress_code',
+    //   label: 'Дресс-код',
+    //   onClick: () => {
+    //   }
+    // },
     {
       id: 'partners',
       label: 'Партнеры Мероприятия',
@@ -59,11 +59,9 @@ export const Header = () => {
               <img className={styles.logo} src={logo} alt="logo"/>
             </LinkButton>
             <p className={styles.logo_text}>
-              <span className={styles.primary_color_text}>
-                летняя
-              </span>
+           
               <span>
-              DIGITAL ELKA 2025
+              Digital Elka 2025
               </span>
             </p>
           </div>

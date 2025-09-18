@@ -1,0 +1,18 @@
+.wrapper{
+    margin-block: 100px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.link{
+    text-align: center;
+    color: #fff;
+}
+.social_links{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}

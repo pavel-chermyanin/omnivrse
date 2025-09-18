@@ -1,10 +1,11 @@
 // top.module.scss
+@import "../../../mixins/mixins.scss";
 .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 60vw;
     //background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     overflow: hidden;
     position: relative;
@@ -14,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
     position: relative;
 }
 
@@ -39,11 +40,15 @@
 }
 
 .title {
-    margin-top: -100px;
-    font-size: 3.5rem;
+    line-height: 1;
+    display:flex;
+    flex-direction: column;
+    // gap: 24px;
+    align-items: center;
     font-weight: 400;
+    @include fz(50,150);
     font-size: 150px;
-    color: white;
+    
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     //margin: 0;
     opacity: 0;
@@ -51,6 +56,32 @@
     animation: slideInTitle 1s ease-out forwards;
     animation-delay: 1.5s;
     font-family: 'Fusing';
+    @include adaptiv-value('margin-top', 450,250);
+    @media (max-width:1000px) {
+        @include adaptiv-value('margin-top', 330,350);
+    }
+
+    // @media (max-width:850px) {
+    //     @include adaptiv-value('margin-top', 110,100);
+    // }
+    //   @media (max-width:600px) {
+    //     @include adaptiv-value('margin-top', 140,100);
+    // }
+    .year{
+        @include fz(30,120);
+    }
+}
+.info{
+    opacity: 0;
+    // font-family: 'Fusing';
+    @include fz(16,30);
+    font-weight: 400;
+     display:flex;
+    flex-direction: column;
+    align-items: center;
+       animation: slideInTitle 1s ease-out forwards;
+    animation-delay: 1.5s;
+    // gap: 8px;
 }
 
 // Анимации
@@ -119,38 +150,3 @@
 }
 
 // Адаптивность
-@media (max-width: 768px) {
-    .title_wrapper {
-        gap: 20px;
-    }
-
-    .img_face {
-        width: 120px;
-        height: 120px;
-    }
-
-    .img_arm {
-        width: 100px;
-        height: 100px;
-    }
-
-    .title {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .img_face {
-        width: 100px;
-        height: 100px;
-    }
-
-    .img_arm {
-        width: 80px;
-        height: 80px;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-}

@@ -1,0 +1,25 @@
+@import "../../../mixins/mixins.scss";
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    line-height: 1.4;
+    @include adaptiv-value('margin-top', 100,0);
+
+    p{
+        text-align: center;
+    }
+}
+
+.first_p{
+    max-width: 320px;
+}
+.second_p{
+    max-width: 500px;
+}
+
+.third_p{
+    max-width: 500px;
+}

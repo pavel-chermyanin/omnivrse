@@ -43,29 +43,7 @@ export const Profile = () => {
           тренды индустрии. Мы делаем масштабнее, смелее, ярче — чтобы снова удивить даже самых искушенных.
         </p>
 
-        <p id={'tickets'} className={styles.buttons_text}>КУПИТЬ БИЛЕТ</p>
-        <div className={styles.text_cost}>
-          <p>СТОИМОСТЬ БИЛЕТА</p>
-          <p>45 000 ₽ + НДС</p>
-        </div>
-        <div className={styles.buttons}>
-          <LinkButton className={styles.button} target={'_blank'} href={hrefUrl}>КАК ЮРИДИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
-          <LinkButton className={styles.button} target={'_blank'} href={buyTicketUrl}>КАК
-            ФИЗИЧЕСКОЕ<br/> ЛИЦО</LinkButton>
-          {/*<Button className={styles.button}>КАК ФИЗИЧЕСКОЕ<br/> ЛИЦО</Button>*/}
-        </div>
-        <p className={styles.text_contacts}>
-          <span className={styles.text_contacts_title}>ПО ВОПРОСУ ПРИОБРЕТЕНИЯ БИЛЕТОВ:</span>
-          <span>zakaz@izmenisoznanie.com</span>
 
-        </p>
-        <p className={styles.text_contacts}>
-          <span className={styles.text_contacts_title}>ПО ВОПРОСАМ ПАРТНЕРСКИХ ИНТЕГРАЦИЙ:</span>
-          <span>YBachinina@izmenisoznanie.com</span>
-          <span>NKisenkov@izmenisoznanie.com</span>
-
-
-        </p>
 
 
       </div>

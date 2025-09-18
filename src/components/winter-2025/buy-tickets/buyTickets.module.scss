@@ -1,0 +1,73 @@
+  @import "../../../mixins/mixins.scss";
+  
+  .text {
+    text-align: center;
+    @include fz(16, 30);
+    //font-size: 29px;
+    margin-bottom: 50px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+  .text_contacts {
+    text-align: center;
+    @include fz(16, 30);
+    //font-size: 29px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .text_contacts_title {
+      font-weight: 700;
+    }
+  }
+
+  .buttons_text {
+    font-weight: 400;
+    // color: var(--primary-color);
+    text-align: center;
+    //margin-block: 70px;
+    @include fz(20, 75);
+    //font-size: 75px;
+    // font-weight: 700;
+    @include adaptiv-value('margin-block',30,70);
+  }
+
+  .text_cost{
+    text-align: center;
+    @include fz(16, 30);
+    font-weight: 700;
+    @include adaptiv-value('margin-block',30,60);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .buttons {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //justify-content: center;
+    @include adaptiv-value('gap',10,60);
+    //gap: 60px;
+    margin-bottom: 80px;
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+
+    }
+
+    .button {
+      font-family: 'Tektur';
+      font-weight: 400;
+      @include adaptiv-value('padding-block',10,20);
+      //width: 100%;
+      //@include adaptiv-value('max-width',100,460);
+      //width: 460px;
+      @include fz(12, 25);
+    }
+
+  }
