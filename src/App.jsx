@@ -1,15 +1,17 @@
 import styles from './App.module.scss'
-import { Header } from "./components/header/Header.jsx";
-import { Top } from "./components/winter-2025/top/Top.tsx";
+import {Header} from "./components/header/Header.jsx";
+import {Top} from "./components/winter-2025/top/Top.tsx";
 // import { Profile } from "./components/profile/Profile.jsx";
 // import { Info } from "./components/info/Info.jsx";
 // import { EventDetails } from "./components/event-details/EventDetails.jsx";
 // import omniWorld from './assets/omniverse-world.webp'
 // import { Footer } from "./components/footer/Footer.jsx";
-import { Description } from './components/winter-2025/description/Description.tsx';
-import { BuyTickets } from './components/winter-2025/buy-tickets/BuyTickets.tsx';
-import { Partners } from './components/winter-2025/partners/Partners.tsx';
-import { Footer } from './components/winter-2025/footer/Footer.tsx';
+import {Description} from './components/winter-2025/description/Description.tsx';
+import {BuyTickets} from './components/winter-2025/buy-tickets/BuyTickets.tsx';
+import {Partners} from './components/winter-2025/partners/Partners.tsx';
+import {Footer} from './components/winter-2025/footer/Footer.tsx';
+import {Concept} from "./components/winter-2025/concept/Concept.js";
+import {BGLayer} from "./components/winter-2025/bg-layer/BGLayer.js";
 
 export const buyTicketUrl = 'https://digitalelka2025.ticketscloud.org/'
 export const telegramUrl = 'https://t.me/izmenisoznanieagency'
@@ -20,18 +22,20 @@ export const sostavSiteUrl = 'https://www.sostav.ru/'
 
 function App() {
 
-  return (
-    <div className={styles.wrapper}>
+    return (
+        <div className={styles.wrapper}>
 
-      <Header />
-      <main className={styles.main}>
-        <Top />
-        <Description/>
-        <BuyTickets/>
-        <Partners/>
-        <Footer/>
-      </main>
-      {/* <div className={styles.bg_1}>
+            <Header/>
+            <main className={styles.main}>
+                <Top/>
+                <Description/>
+                <BuyTickets/>
+                <Concept/>
+                <BGLayer/>
+                <Partners/>
+                <Footer/>
+            </main>
+            {/* <div className={styles.bg_1}>
         <Top/>
         <Profile/>
 
@@ -43,8 +47,8 @@ function App() {
         </div>
 
       </div> */}
-    </div>
-  )
+        </div>
+    )
 }
 
 export default App

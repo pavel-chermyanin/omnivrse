@@ -1,0 +1,6 @@
+@import "../../../mixins/mixins.scss";
+
+.layer{
+  min-height: clamp(400vh, 100vh,300vh);
+  //@include adaptiv-value('min-height', 1500, 1200);
+}
