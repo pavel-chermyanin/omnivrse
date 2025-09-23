@@ -9,15 +9,30 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  background-image: url("./assets/winter/bg-new.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  min-height: 100vh;
+  //background-image: url("./assets/winter/bg-new.webp");
+  //background-repeat: no-repeat;
+  background: #101216;
+  //background-size: cover;
+  //background-position: top;
+  //min-height: 100vh;
+
+  //@media (max-width: 680px) {
+  //  background-image: url("./assets/winter/bg-mob.webp");
+  //  background-size: auto 100%;
+  //  //background-size: contain;
+  //}
+  //@media (max-width: 600px) {
+  //  background-image: url("./assets/winter/bg-new2.webp");
+  //  background-size: contain;
+  //}
+  //@media (max-width: 768px) {
+  //  //background-image: url("./assets/winter/bg-new-mobile.webp");
+  //  background-size:  auto 100%; // ширина 100%, высота auto
+  //}
 
   .main{
     overflow: hidden;
-    @include adaptiv-value('padding-top',100,120);
+    //@include adaptiv-value('padding-top',100,120);
   }
   // @include adaptiv-value('padding-top',100,120);
 
@@ -52,4 +67,22 @@
   //   //}
   // }
 
+}
+
+.top_bg{
+
+  position: relative;
+}
+
+.img_zanaves{
+  //padding-top: 200px;
+  position: absolute;
+  width: 100%;
+  //height: clamp(120vh, 30vh,40vh);
+  //object-fit: cover;
+  //margin-top: clamp(-20vw, -30vw,-40vw);
+}
+.img_shater{
+  width: 100%;
+  margin-top: clamp(-20vw, -30vw,-40vw);
 }

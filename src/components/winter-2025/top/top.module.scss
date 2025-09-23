@@ -5,12 +5,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60vh;
+    padding-top: clamp(30vw, 10vw, 30vw);
     //height: 100vh;
     //min-height: 60vw;
     //background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     overflow: hidden;
     position: relative;
+    //@media (max-width: 1024px) {
+    //    //background-image: url("./assets/winter/bg-new-mobile.webp");
+    //    margin-top: 20vw;
+    //}
 }
 
 .title_wrapper {
@@ -48,8 +52,8 @@
     // gap: 24px;
     align-items: center;
     font-weight: 400;
-    @include fz(50,150);
-    font-size: 150px;
+    @include fz(70,150);
+    //font-size: 150px;
     
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     //margin: 0;
@@ -58,6 +62,7 @@
     animation: slideInTitle 1s ease-out forwards;
     animation-delay: 1.5s;
     font-family: 'Fusing';
+
     //@include adaptiv-value('margin-top', 450,250);
     //@media (max-width:1000px) {
     //    @include adaptiv-value('margin-top', 330,350);

@@ -1,6 +1,8 @@
 import styles from './App.module.scss'
 import {Header} from "./components/header/Header.jsx";
 import {Top} from "./components/winter-2025/top/Top.tsx";
+import shater from './assets/winter/shater.png'
+import zanaves from './assets/winter/zanaves.png'
 // import { Profile } from "./components/profile/Profile.jsx";
 // import { Info } from "./components/info/Info.jsx";
 // import { EventDetails } from "./components/event-details/EventDetails.jsx";
@@ -27,11 +29,18 @@ function App() {
 
             <Header/>
             <main className={styles.main}>
-                <Top/>
-                <Description/>
-                <BuyTickets/>
-                <Concept/>
-                <BGLayer/>
+                <div className={styles.top_bg}>
+                    <img className={styles.img_zanaves} src={zanaves} />
+                    <Top/>
+                    <Description/>
+                    <BuyTickets/>
+                    <Concept/>
+                </div>
+
+
+
+                <img className={styles.img_shater} src={shater} />
+                {/*<BGLayer/>*/}
                 <Partners/>
                 <Footer/>
             </main>
