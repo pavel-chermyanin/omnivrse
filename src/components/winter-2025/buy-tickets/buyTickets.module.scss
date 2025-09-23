@@ -4,7 +4,7 @@
     text-align: center;
     @include fz(16, 30);
     //font-size: 29px;
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
 
     span {
       font-weight: 700;
@@ -53,10 +53,12 @@
     grid-template-columns: 1fr 1fr;
     //justify-content: center;
     @include adaptiv-value('gap',10,60);
+    @include adaptiv-value('margin-bottom',40,80);
     //gap: 60px;
-    margin-bottom: 80px;
-    @media (max-width: 600px) {
+    //margin-bottom: 80px;
+    @media (max-width: 650px) {
       grid-template-columns: 1fr;
+      max-width: 300px;
 
     }
 
@@ -67,7 +69,7 @@
       //width: 100%;
       //@include adaptiv-value('max-width',100,460);
       //width: 460px;
-      @include fz(12, 25);
+      @include fz(18, 25);
     }
 
   }

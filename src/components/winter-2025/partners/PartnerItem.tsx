@@ -22,7 +22,7 @@ export const PartnerItem = ({ title, listImages, count = 1 }: Props) => {
         className={`${styles.grid}`}>
         {listImages.map((image,index) => {
           if(image.link) {
-            return <a key={index} href={image.link} target='_blank'>
+            return <a key={index} href={image.link} target='_blank' className={styles.link}>
               <img key={index} className={`${styles.img_logo}`} src={image.src} alt="sostavLogo" />
             </a>
           }

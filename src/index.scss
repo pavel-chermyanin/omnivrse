@@ -99,7 +99,7 @@ img{
 .container{
     max-width: 1360px;
     margin: 0 auto;
-    @include adaptiv-value('padding-inline', 10, 40);
+    @include adaptiv-value('padding-inline', 15, 40);
     height: 100%;
     position: relative;
 }

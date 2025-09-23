@@ -6,6 +6,7 @@
 }
 
 .sup_title_text {
+
   font-weight: 400;
   // color: var(--primary-color);
   text-align: center;
@@ -13,7 +14,7 @@
   @include fz(20, 75);
   //font-size: 75px;
   // font-weight: 700;
-  @include adaptiv-value('margin-block',30,70);
+  @include adaptiv-value('margin-block',10,70);
 }
 
 .title {

@@ -3,6 +3,7 @@ import neo from './neo.png'
 
 export const Concept = () => {
   return (
+    <div className='container'>
     <div className={styles.wrapper}>
       <h4 className={styles.sup_title_text}>КОНЦЕПЦИЯ</h4>
       <h3 className={styles.title}>
@@ -26,6 +27,7 @@ export const Concept = () => {
         лучами на лица - словно само солнце заглянуло,<br/>
         чтобы благословить их
       </p>
+    </div>
     </div>
   )
 }

@@ -2,7 +2,7 @@
 
 .title {
   // color: var(--primary-color);
-  @include fz(20, 75);
+  @include fz(16, 75);
   text-align: center;
   font-weight: 400;
   @include adaptiv-value('margin-bottom', 20, 60);
@@ -35,9 +35,18 @@
   //   }
   // }
   .img_logo{
+    text-align: center;
     max-width: 100%;
     //width: 100%;
     object-fit: contain;
-    //@include adaptiv-value('width', 150, 380);
+    //@include adaptiv-value('padding', 30, 0);
+    @media (max-width: 768px) {
+      max-width: 60%;
+    }
   }
+}
+
+.link{
+  display: flex;
+  justify-content: center;
 }
