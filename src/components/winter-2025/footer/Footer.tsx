@@ -2,15 +2,20 @@ import styles from './footer.module.scss'
 import {telegramUrl,vkUrl} from '../../../App'
 import telegram from '../../../assets/telegram.png'
 import vk from '../../../assets/vk.png'
+import izmeni_soznanie from '../../../assets/winter/izmeni-soznanie-logo.png'
 import {LinkButton} from '../../link-button/LinkButton'
+import {PartnerItem} from "../partners/PartnerItem";
+import {sostavSiteUrl} from "../partners/Partners";
 
 export const Footer = () => {
     return (
         <div className="container">
             <div className={styles.wrapper}>
-                <a className={styles.link} href="https://izmenisoznanie.com/" target='_blank'>
-                    ПРОДЮСЕР IZMENISOZNANIE.COM
-                </a>
+                <PartnerItem title={'ПРОДЮСЕР МЕРОПРИЯТИЯ'}
+                             listImages={[{ src: izmeni_soznanie, link: "https://izmenisoznanie.com/" }]} />
+                {/*<a className={styles.link} href="https://izmenisoznanie.com/" target='_blank'>*/}
+                {/*    ПРОДЮСЕР IZMENISOZNANIE.COM*/}
+                {/*</a>*/}
                 <div className={styles.social_links}>
                     <LinkButton className={styles.social_telegram} plain target={'_blank'} href={telegramUrl}>
                         <img src={telegram} alt="telegram" />

@@ -71,7 +71,10 @@
 
 .top_bg{
 
+  @include adaptiv-value('padding-top',60,110);
   position: relative;
+  //@include adaptiv-value('padding-top',100,0);
+  //padding-top: 100px;
 }
 
 .bottom_bg{
@@ -94,14 +97,12 @@
 }
 
 .img_zanaves{
-  //padding-top: 200px;
+  //padding-top: 100px;
+  top: 0;
   position: absolute;
   width: 100%;
+  @include adaptiv-value('padding-top',60,0);
 
-
-  //height: clamp(120vh, 30vh,40vh);
-  //object-fit: cover;
-  //margin-top: clamp(-20vw, -30vw,-40vw);
 }
 .img_shater{
   position: relative;

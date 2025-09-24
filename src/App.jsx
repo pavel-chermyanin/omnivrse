@@ -3,6 +3,7 @@ import {Header} from "./components/header/Header.jsx";
 import {Top} from "./components/winter-2025/top/Top.tsx";
 import shater from './assets/winter/shater-img.webp'
 import zanaves from './assets/winter/zanaves-bg.webp'
+import zanaves_mob from './assets/winter/bg-mob2.webp'
 import footer_img from './assets/winter/footer-bg.webp'
 // import { Profile } from "./components/profile/Profile.jsx";
 // import { Info } from "./components/info/Info.jsx";
