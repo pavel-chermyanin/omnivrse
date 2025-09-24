@@ -1,8 +1,9 @@
 import styles from './App.module.scss'
 import {Header} from "./components/header/Header.jsx";
 import {Top} from "./components/winter-2025/top/Top.tsx";
-import shater from './assets/winter/shater.png'
-import zanaves from './assets/winter/zanaves.png'
+import shater from './assets/winter/shater-img.webp'
+import zanaves from './assets/winter/zanaves-bg.webp'
+import footer_img from './assets/winter/footer-bg.webp'
 // import { Profile } from "./components/profile/Profile.jsx";
 // import { Info } from "./components/info/Info.jsx";
 // import { EventDetails } from "./components/event-details/EventDetails.jsx";
@@ -41,8 +42,12 @@ function App() {
 
                 <img className={styles.img_shater} src={shater} />
                 {/*<BGLayer/>*/}
-                <Partners/>
-                <Footer/>
+                <div className={styles.bottom_bg}>
+                    <img className={styles.footer_img} src={footer_img} />
+                    <Partners/>
+                    <Footer/>
+                </div>
+
             </main>
             {/* <div className={styles.bg_1}>
         <Top/>

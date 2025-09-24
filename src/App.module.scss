@@ -11,7 +11,7 @@
   flex-direction: column;
   //background-image: url("./assets/winter/bg-new.webp");
   //background-repeat: no-repeat;
-  background: #101216;
+  background: #060a0d;
   //background-size: cover;
   //background-position: top;
   //min-height: 100vh;
@@ -74,15 +74,39 @@
   position: relative;
 }
 
+.bottom_bg{
+  position: relative;
+  height: 100%;
+  padding-bottom: 100px;
+  //background-image: url("./assets/winter/footer-bg.webp");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+}
+
+.footer_img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  object-fit: contain;
+  //z-index: -1;
+  //height: 100%;
+
+}
+
 .img_zanaves{
   //padding-top: 200px;
   position: absolute;
   width: 100%;
+
+
   //height: clamp(120vh, 30vh,40vh);
   //object-fit: cover;
   //margin-top: clamp(-20vw, -30vw,-40vw);
 }
 .img_shater{
+  position: relative;
+
   width: 100%;
   margin-top: clamp(-20vw, -30vw,-40vw);
+  z-index: 100;
 }
