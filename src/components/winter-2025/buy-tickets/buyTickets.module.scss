@@ -1,5 +1,8 @@
   @import "../../../mixins/mixins.scss";
-  
+  .wrapper{
+    position: relative;
+    z-index: 1000;
+  }
   .text {
     text-align: center;
     @include fz(16, 30);

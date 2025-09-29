@@ -7,7 +7,9 @@ export const Description = () => {
 
 
     return (
-        <div className="container">
+        <div className="container" style={{
+            zIndex:1000
+        }}>
             <div id='about' className={styles.wrapper}>
                 <p className={styles.first_p}>
                     Ежегодная

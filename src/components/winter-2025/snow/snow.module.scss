@@ -1,0 +1,28 @@
+// Snow.module.scss
+.snowContainer {
+  //padding-top: 100px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(300vh) rotate(360deg);
+    opacity: 0;
+  }
+}

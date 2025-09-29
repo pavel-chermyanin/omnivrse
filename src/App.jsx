@@ -1,69 +1,70 @@
-import styles from './App.module.scss'
-import {Header} from "./components/header/Header.jsx";
-import {Top} from "./components/winter-2025/top/Top.tsx";
-import shater from './assets/winter/shater-img.webp'
-import zanaves from './assets/winter/zanaves-bg.webp'
-import zanaves_mob from './assets/winter/bg-mob2.webp'
-import footer_img from './assets/winter/footer-bg.webp'
-// import { Profile } from "./components/profile/Profile.jsx";
-// import { Info } from "./components/info/Info.jsx";
-// import { EventDetails } from "./components/event-details/EventDetails.jsx";
-// import omniWorld from './assets/omniverse-world.webp'
-// import { Footer } from "./components/footer/Footer.jsx";
-import {Description} from './components/winter-2025/description/Description.tsx';
-import {BuyTickets} from './components/winter-2025/buy-tickets/BuyTickets.tsx';
-import {Partners} from './components/winter-2025/partners/Partners.tsx';
-import {Footer} from './components/winter-2025/footer/Footer.tsx';
-import {Concept} from "./components/winter-2025/concept/Concept.js";
-import {BGLayer} from "./components/winter-2025/bg-layer/BGLayer.js";
+    import styles from './App.module.scss'
+    import {Header} from "./components/header/Header.jsx";
+    import {Top} from "./components/winter-2025/top/Top.tsx";
+    import shater from './assets/winter/shater-img.webp'
+    import zanaves from './assets/winter/zanaves-bg.webp'
+    import zanaves_mob from './assets/winter/bg-mob2.webp'
+    import footer_img from './assets/winter/footer-bg.webp'
+    // import { Profile } from "./components/profile/Profile.jsx";
+    // import { Info } from "./components/info/Info.jsx";
+    // import { EventDetails } from "./components/event-details/EventDetails.jsx";
+    // import omniWorld from './assets/omniverse-world.webp'
+    import { Snow } from "./components/winter-2025/snow/Snow.js";
+    import {Description} from './components/winter-2025/description/Description.tsx';
+    import {BuyTickets} from './components/winter-2025/buy-tickets/BuyTickets.tsx';
+    import {Partners} from './components/winter-2025/partners/Partners.tsx';
+    import {Footer} from './components/winter-2025/footer/Footer.tsx';
+    import {Concept} from "./components/winter-2025/concept/Concept.js";
+    import {BGLayer} from "./components/winter-2025/bg-layer/BGLayer.js";
 
-export const buyTicketUrl = 'https://digitalelka2025.ticketscloud.org/'
-export const telegramUrl = 'https://t.me/izmenisoznanieagency'
-export const vkUrl = 'https://vk.com/izmenisoznanie'
-export const geoUrl = "https://yandex.ru/maps/org/supermetall/228997623782/?ll=37.682489%2C55.764264&mode=search&sctx=ZAAAAAgBEAAaKAoSCZ5eKcsQz0JAEdOgaB7A4EtAEhIJBkoKLIDJAEARoKnXLQJj5T8iBgABAgMEBSgKOABAypIHSABiC2ZyZXNobmVzcz0wYh1zb3VyY2U9YnVzaW5lc3M6c3ByYXZfZXhwX3JlZmoCcnWdAc3MzD2gAQCoAQC9AQvYR%2BXCAQbm38mK1QaCAhbRgdGD0L%2FQtdGA0LzQtdGC0LDQu9C7igIAkgIAmgIMZGVza3RvcC1tYXBz&sll=37.682489%2C55.764264&sspn=0.001352%2C0.000431&text=%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BC%D0%B0%D1%82%D0%B5%D0%BB%D0%BB&z=20.6"
-export const mainSiteUrl = 'https://izmenisoznanie.com/'
-export const sostavSiteUrl = 'https://www.sostav.ru/'
+    export const buyTicketUrl = 'https://digitalelka2025.ticketscloud.org/'
+    export const telegramUrl = 'https://t.me/izmenisoznanieagency'
+    export const vkUrl = 'https://vk.com/izmenisoznanie'
+    export const geoUrl = "https://yandex.ru/maps/org/supermetall/228997623782/?ll=37.682489%2C55.764264&mode=search&sctx=ZAAAAAgBEAAaKAoSCZ5eKcsQz0JAEdOgaB7A4EtAEhIJBkoKLIDJAEARoKnXLQJj5T8iBgABAgMEBSgKOABAypIHSABiC2ZyZXNobmVzcz0wYh1zb3VyY2U9YnVzaW5lc3M6c3ByYXZfZXhwX3JlZmoCcnWdAc3MzD2gAQCoAQC9AQvYR%2BXCAQbm38mK1QaCAhbRgdGD0L%2FQtdGA0LzQtdGC0LDQu9C7igIAkgIAmgIMZGVza3RvcC1tYXBz&sll=37.682489%2C55.764264&sspn=0.001352%2C0.000431&text=%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BC%D0%B0%D1%82%D0%B5%D0%BB%D0%BB&z=20.6"
+    export const mainSiteUrl = 'https://izmenisoznanie.com/'
+    export const sostavSiteUrl = 'https://www.sostav.ru/'
 
-function App() {
+    function App() {
 
-    return (
-        <div className={styles.wrapper}>
+        return (
+            <div className={styles.wrapper}>
 
-            <Header/>
-            <main className={styles.main}>
-                <div className={styles.top_bg}>
-                    <img className={styles.img_zanaves} src={zanaves} />
-                    <Top/>
-                    <Description/>
-                    <BuyTickets/>
-                    <Concept/>
-                </div>
+                <Header/>
+                <main className={styles.main}>
+                    <div className={styles.top_bg}>
+                        <Snow/>
+                        <img className={styles.img_zanaves} src={zanaves} />
+                        <Top/>
+                        <Description/>
+                        <BuyTickets/>
+                        <Concept/>
+                    </div>
 
 
 
-                <img className={styles.img_shater} src={shater} />
-                {/*<BGLayer/>*/}
-                <div className={styles.bottom_bg}>
-                    <img className={styles.footer_img} src={footer_img} />
-                    <Partners/>
-                    <Footer/>
-                </div>
+                    <img className={styles.img_shater} src={shater} />
+                    {/*<BGLayer/>*/}
+                    <div className={styles.bottom_bg}>
+                        <img className={styles.footer_img} src={footer_img} />
+                        <Partners/>
+                        <Footer/>
+                    </div>
 
-            </main>
-            {/* <div className={styles.bg_1}>
-        <Top/>
-        <Profile/>
+                </main>
+                {/* <div className={styles.bg_1}>
+            <Top/>
+            <Profile/>
 
-        <Info/>
-        <img className={styles.omniWorld} src={omniWorld} alt=""/>
-        <div className={styles.bg_2}>
-          <EventDetails/>
-          <Footer/>
-        </div>
+            <Info/>
+            <img className={styles.omniWorld} src={omniWorld} alt=""/>
+            <div className={styles.bg_2}>
+              <EventDetails/>
+              <Footer/>
+            </div>
 
-      </div> */}
-        </div>
-    )
-}
+          </div> */}
+            </div>
+        )
+    }
 
-export default App
+    export default App
