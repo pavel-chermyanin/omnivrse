@@ -28,7 +28,7 @@ Disallow: /assets/json/
 
 # Sitemaps
 Sitemap: https://digitalelka.com/sitemap.xml
-Sitemap: https://digitalelka.com/sitemap-images.xml
+Sitemap: https://digitalelka.com/sitemap-images-v2.xml
 
 # Crawl-delay (опционально)
 Crawl-delay: 1
