@@ -24,8 +24,8 @@ export const Top = () => {
         </h1>
 
         <div className={styles.info}>
-          <span>5.12</span>
-          <span>19:00-2:00</span>
+          <span>05.12</span>
+          <span>19:00—2:00</span>
           <span>TAU</span>
         </div>
       </div>

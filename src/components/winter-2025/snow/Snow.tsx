@@ -1,5 +1,5 @@
 // components/winter-2025/snow/Snow.tsx
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import styles from './snow.module.scss';
 
 interface Snowflake {
@@ -17,9 +17,16 @@ export const Snow = () => {
   const animationRef = useRef<number>();
   const snowflakesRef = useRef<Snowflake[]>([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // Устанавливаем размеры canvas до первой отрисовки
+    const container = canvas.parentElement;
+    if (container) {
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+    }
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -27,6 +34,12 @@ export const Snow = () => {
     // Инициализация снежинок
     const initSnowflakes = () => {
       const snowflakes: Snowflake[] = [];
+
+      // Проверяем что canvas имеет ненулевые размеры
+      if (canvas.width === 0 || canvas.height === 0) {
+        return snowflakes;
+      }
+
       for (let i = 0; i < 50; i++) {
         snowflakes.push({
           x: Math.random() * canvas.width,
@@ -75,7 +88,11 @@ export const Snow = () => {
 
     // Основной цикл анимации
     const animate = () => {
-      if (!canvas || !ctx) return;
+      if (!canvas || !ctx || canvas.width === 0 || canvas.height === 0) {
+        // Пропускаем кадр если canvas не готов
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
 
       // Очищаем canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -102,7 +119,6 @@ export const Snow = () => {
     };
 
     // Инициализация
-    handleResize();
     snowflakesRef.current = initSnowflakes();
     animate();
 

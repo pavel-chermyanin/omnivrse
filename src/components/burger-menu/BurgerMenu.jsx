@@ -32,17 +32,37 @@ export const BurgerMenu = ({ items }) => {
   }, [isOpen]);
 
   // Функция для плавной прокрутки
+  // Упрощенная версия функции скролла
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      });
-    }
+    if (!element) return;
+
+    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - 100;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000;
+    let startTime = null;
+
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+
+      // Кубическая функция плавности
+      const easeInOutCubic = progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    requestAnimationFrame(animation);
     closeMenu();
   };
-
   return (
     <div className={styles.burgerMenu} ref={menuRef}>
       <button
